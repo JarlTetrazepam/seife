@@ -1,0 +1,55 @@
+html {
+  font-family: "Verdana",
+}
+
+body {
+  background-color: #FBFBFB;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  min-height: 150vh;
+  min-width: 100vw;
+  flex-grow: 1;
+  margin: 0px;
+}
+
+nav {
+    margin: 0px;
+    position: -webkit-fixed;
+    position: fixed;
+    bottom: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+#logo {
+  flex-shrink: 0;
+  flex-grow: 0;
+  height: 20px;
+  width: 20px;
+}
+
+.logoWrapper {
+  display: block;
+  max-height: auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.navButtons {
+  display: flex;
+  margin: 0px;
+  justify-content: space-around;
+}
+
+.navButtons li {
+
+}
