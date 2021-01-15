@@ -20,6 +20,8 @@ nav {
     bottom: 0px;
     padding: 0px;
     width: 100%;
+    min-height: 50px;
+    border: black solid;
 }
 
 #logo {
@@ -50,6 +52,15 @@ ul {
   justify-content: space-around;
 }
 
-.navButtons li {
+.bodyWrapper {
+  height: ;
+}
 
+@supports (display: flex) {
+  @media screen and (min-width: 900px), screen and (min-height: 900px) {
+    nav {
+      height: 8vh;
+      max-height: 60px;
+    }
+  }
 }
