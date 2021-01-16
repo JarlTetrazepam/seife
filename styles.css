@@ -1,19 +1,32 @@
 html {
-  font-family: "Verdana",
+  font-family: "Verdana";
+  --extrasMaxHeight: 60px; /* extras are the logo objects as well as the navbar */
+  --extrasHeight: 7.2%;
+  --extrasMinHeight: 50px;
+  --lightBlue: #A3D0E4;
+  color: #2E2E2E;
+}
+
+html, body {
+  min-height: 100%;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 body {
-  background-color: #FBFBFB;
   padding: 0px;
   display: flex;
   flex-direction: row;
-  min-height: 150vh;
   min-width: 100vw;
-  flex-grow: 1;
+  /*flex-grow: 1;*/
   margin: 0px;
+  flex-wrap: wrap;
+  overflow: scroll;
 }
 
 nav {
+    display: flex;
+    align-items: end;
     margin: 0px;
     position: -webkit-fixed;
     position: fixed;
@@ -32,8 +45,12 @@ nav {
 }
 
 .logoWrapper {
+  flex-grow: 0;
   display: block;
-  max-height: auto;
+  min-height: var(--extrasMinHeight);
+  max-height: var(--extrasMaxHeight);
+  width: 100%;
+  border: black solid;
 }
 
 a {
@@ -44,6 +61,7 @@ a {
 ul {
   list-style-type: none;
   padding: 0px;
+  width: 100%;
 }
 
 .navButtons {
@@ -53,14 +71,68 @@ ul {
 }
 
 .bodyWrapper {
-  height: ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
-@supports (display: flex) {
-  @media screen and (min-width: 900px), screen and (min-height: 900px) {
-    nav {
-      height: 8vh;
-      max-height: 60px;
+.bodyInnerWrapper {
+  width: 80%;
+  max-width: 600px;
+  height: 100%;
+}
+
+.vid, .images, .more {
+  width: 100%;
+  min-height: 33.33333%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.presItem {
+  max-width: 95%;
+}
+
+.images {
+  align-items: end;
+  text-align: right;
+}
+
+.footer {
+  height: 7.8vh;
+  max-height: var(--extrasMaxHeight);
+  width: 100%;
+  background-color: var(--lightBlue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 500px) { /* From this width on, presItem alignment is starting to look weird */
+
+    .presItem {
+      align-self: center;
+      margin-right: 5vw;
     }
-  }
+
+    #presImage {
+      margin-right: -5vw;
+    }
+}
+
+@media screen and (min-width: 900px), screen and (min-height: 900px) {
+    nav {
+      height: var(--extrasHeight);
+      max-height: var(--extrasMaxHeight);
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .bodyInnerWrapper {
+      max-width: none;
+    }
 }
