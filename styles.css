@@ -1,6 +1,6 @@
 html {
   font-family: "Verdana";
-  --extrasMaxHeight: 60px; /* extras are the logo objects as well as the navbar */
+  --extrasMaxHeight: 64px; /* extras are the logo objects as well as the navbar */
   --extrasHeight: 7.2%;
   --extrasMinHeight: 50px;
   --lightBlue: #A3D0E4;
@@ -34,7 +34,7 @@ nav {
     bottom: 0px;
     padding: 0px;
     width: 100%;
-    min-height: 50px;
+    min-height: var(--extrasMinHeight);
     border-top: var(--lightBlue) 1px solid;
     background-color: var(--greyWhite);;
     box-shadow: 0px -0.8px 3px rgba(0, 0, 0, 0.25);
@@ -97,7 +97,9 @@ ul {
 }
 
 .presItem {
-  max-width: 95%;
+  min-width: 320px;
+  height: auto;
+  width: calc(-0.00013116 * );
 }
 
 .images {
@@ -145,18 +147,13 @@ li {
 @media screen and (min-width: 500px) { /* From this width on, presItem alignment is starting to look weird */
 
     .presItem {
-      align-self: center;
-      margin-right: 5vw;
+
     }
 
-    #presImage {
-      margin-right: -5vw;
-    }
 }
 
 @media screen and (min-width: 900px), screen and (min-height: 900px) {
     nav {
-      height: var(--extrasHeight);
       max-height: var(--extrasMaxHeight);
     }
 }
