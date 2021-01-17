@@ -1,7 +1,7 @@
+//hides navbar when scrolling down, makes it reappear when scrolling up
 var prevPos = window.pageYOffset;
 const navbar = document.getElementById("navigation");
 window.onscroll = function() {navHider()};
-
 
 function navHider() {
   let pos = window.pageYOffset;
@@ -11,4 +11,19 @@ function navHider() {
     navbar.style.bottom = "0px"
   }
   prevPos = pos;
+};
+
+//responsiveness/screen size scaling
+var presItem = document.getElementsByClassName("presItem");
+var bodyWidth = document.body.getBoundingClientRect().width;
+var x = bodyWidth;
+var perfectPresItemSize = 1.3116 * Math.pow(10, -4) * Math.pow(x, 2) + 1.50607148 * x + 10.3241424; //formula acquired through testing
+var perfectFontSize = 1.5007 * Math.pow(10, -12) * Math.pow(x, 4) - 9.651 * Math.pow(10, -9) * Math.pow(x, 3) + 1.948 * Math.pow(10, -5) * Math.pow(x, 2) - 0.0109467 * x + 17.9363218 //formula acquired through testing
+window.onload = function() {dynamicScaling(bodyWidth, presItem)};
+
+function dynamicScaling(width, presItem) {
+  document.body.style.fontSize = perfectFontSize + "px";
+  for (let i = 0; i < presItem.length; i++) {
+    presItem[i].style.width = perfectPresItemSize + "px";
+  }
 };
