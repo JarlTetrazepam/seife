@@ -207,6 +207,9 @@ li:active {
       max-width: none;
       border-top: var(--lightBlue) solid 1.5px;
       box-shadow: inset 0px 0.8px 3px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
     }
 
     .logoWrapper {
@@ -248,5 +251,30 @@ li:active {
       min-height: calc(var(--extrasMinHeight) + 20px);
       height: var(--extrasHeight);
       max-height: calc(var(--extrasMaxHeight) + 20px);
+    }
+
+    .presWrapper {
+      display: none;
+    }
+
+    .presWrapper.active {
+      display: flex;
+      align-items: center;
+      max-width: 80%;
+      padding: 0px;
+    }
+
+    .presItem {
+      width: 100%;
+      max-width: none;
+    }
+
+    .presWrapper > p {
+      max-width: 70%;
+      align-self: start;
+    }
+
+    h3 {
+      align-self: start;
     }
 }
