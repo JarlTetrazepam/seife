@@ -8,6 +8,7 @@ html {
   --greyWhiteActive: #F8F8F8;
   --activeNavbar: #9DC9DC; /* color for navbar items on :active */
   --liBorderSize: 2px; /* to make adjustment of nav > ul > li item borders easier */
+  background-color: var(--greyWhite);
   color: #2E2E2E; /* universal font color, not quite black to reduce eyestrain */
 }
 
@@ -182,6 +183,10 @@ li:active {
   filter: drop-shadow(1px 1px 0.5px rgba(0, 0, 0, 0.25));
 }
 
+.arrowWrapper, .slideDots {
+  display: none;
+}
+
 @media screen and (max-width: 387px)
       ul {
       font-size: 13px;
@@ -206,7 +211,7 @@ li:active {
     .bodyInnerWrapper {
       max-width: none;
       border-top: var(--lightBlue) solid 1.5px;
-      box-shadow: inset 0px 0.8px 3px rgba(0, 0, 0, 0.25);
+      box-shadow: -6px 0 transparent, -6px transparent, inset 0.5px 0.8px 3px -2px rgba(0, 0, 0, 0.25); /* bit of effort here to make the box shadow apply to the top part only */
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -239,7 +244,7 @@ li:active {
     }
 
     .footer {
-      order: 3;
+      order: 4;
     }
 
     .navButtons {
@@ -264,9 +269,10 @@ li:active {
       padding: 0px;
     }
 
-    .presItem {
+    .active .presItem {
       width: 100%;
       max-width: none;
+      border: solid 1px black;
     }
 
     .presWrapper > p {
@@ -276,5 +282,61 @@ li:active {
 
     h3 {
       align-self: start;
+    }
+
+    .presWrapper p {
+      margin: 0;
+      margin-top: 10px;
+    }
+
+    .arrowWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 6%;
+    }
+
+    .arrow {
+      margin: 4px;
+      width: 0;
+      height: 0;
+      border-top: 100px solid transparent;
+      border-bottom: 100px solid transparent;
+    }
+
+    .dropShadow {
+      filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.25));
+      -webkit-filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.25));
+      -moz-filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.25));
+      -ms-filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.25));
+      -o-filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.25));
+    }
+
+    .slideDotsWrapper {
+      background-color: var(--greyWhite);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      order: 3;
+      width: 100%;
+      min-height: 10px;
+      max-height: 5vh;
+      margin: 0.5%;
+    }
+
+    .right {
+      border-left: 50px solid var(--lightBlue);
+    }
+
+    .left {
+      border-right: 50px solid var(--lightBlue);
+    }
+
+    .circle {
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      background-color: var(--lightBlue);
+      margin: 1vw;
     }
 }
