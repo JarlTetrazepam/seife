@@ -25,13 +25,13 @@ window.onload = function() {dynamicScaling(bodyWidth, presItem)};
 function dynamicScaling(width, presItem) {
   document.body.style.fontSize = perfectFontSize + "px";
 
-  if (bodyWidth < 1300) {
+  if (bodyWidth < 1280) {
     for (let i = 0; i < presItem.length; i++) {
       presItem[i].style.width = perfectPresItemSize + "px";
     }
   }
 
-  if(bodyWidth >= 1300) {
+  if(bodyWidth >= 1280) {
     navbar.style.fontSize = perfectNavFontSize + "px";
   }
 };

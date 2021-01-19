@@ -202,7 +202,7 @@ li:active {
     }
 }
 
-@media screen and (min-width: 1300px) { /* ~Desktop border https://gs.statcounter.com/screen-resolution-stats */
+@media screen and (min-width: 1280px) { /* ~Desktop border https://gs.statcounter.com/screen-resolution-stats/desktop/worldwide */
     .bodyInnerWrapper {
       max-width: none;
       border-top: var(--lightBlue) solid 1.5px;
