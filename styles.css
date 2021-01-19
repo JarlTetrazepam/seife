@@ -5,13 +5,26 @@ html {
   --extrasMinHeight: 50px;
   --lightBlue: #A3D0E4;
   --greyWhite: #FBFBFB;
-  color: #2E2E2E;
+  --greyWhiteActive: #F8F8F8;
+  --activeNavbar: #9DC9DC; /* color for navbar items on :active */
+  --liBorderSize: 2px; /* to make adjustment of nav > ul > li item borders easier */
+  color: #2E2E2E; /* universal font color, not quite black to reduce eyestrain */
 }
 
 html, body {
   min-height: 100%;
   min-height: 100vh;
   min-height: -webkit-fill-available;
+}
+
+.noselect { /* To remove accidental text selecting of navbuttons */
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 body {
@@ -40,6 +53,10 @@ nav {
     background-color: var(--greyWhite);;
     box-shadow: 0px -0.8px 3px rgba(0, 0, 0, 0.25);
     transition: bottom 0.2s;
+}
+
+nav:hover {
+  cursor: default;
 }
 
 #logo {
@@ -130,11 +147,30 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-shadow: 0.2px 0.2px 0.2px rgba(0, 0, 0, 0.25);
+  border-left: solid var(--greyWhite) var(--liBorderSize);            /* invisible border because otherwise :hover moves the content of li*/
+  border-right:  solid var(--greyWhite) var(--liBorderSize);*/
+}
+
+li:hover {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0);
+  cursor: pointer;
+  text-shadow: -0.2px -0.2px 0.2px rgba(0, 0, 0, 0.25);
+  border-left: solid var(--lightBlue) var(--liBorderSize);
+  border-right: solid var(--lightBlue) var(--liBorderSize);
+  background-color: var(--lightBlue);
+  transition: background-color 0.2s ease-out, border-left 0.2s ease-out, border-right  0.2s ease-out;
+}
+
+li:active {
+  background-color: var(--activeNavbar);
+  transition: background-color 0.1s ease-out;
 }
 
 .lightBlue {
   background-color: var(--lightBlue);
-
+  border-left: solid var(--lightBlue) var(--liBorderSize);
+  border-right: solid var(--lightBlue) var(--liBorderSize);
 }
 
 .icon {
@@ -146,7 +182,7 @@ li {
   filter: drop-shadow(1px 1px 0.5px rgba(0, 0, 0, 0.25));
 }
 
-@media screen and (max-width: 387px) { /* From this width on, presItem alignment is starting to look weird */
+@media screen and (max-width: 387px)
       ul {
       font-size: 13px;
     }
@@ -169,7 +205,7 @@ li {
 @media screen and (min-width: 1300px) { /* ~Desktop border https://gs.statcounter.com/screen-resolution-stats */
     .bodyInnerWrapper {
       max-width: none;
-      border-top: var(--lightBlue) solid 1px;
+      border-top: var(--lightBlue) solid 1.5px;
       box-shadow: inset 0px 0.8px 3px rgba(0, 0, 0, 0.25);
     }
 
