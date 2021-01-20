@@ -35,3 +35,52 @@ function dynamicScaling(width, presItem) {
     navbar.style.fontSize = perfectNavFontSize + "px";
   }
 };
+
+
+//pseudocode image slider
+/*x = 0
+event arrow triggers function
+
+function()
+
+array
+123
+active element = array[x]
+
+remove class active
+x++/x--
+if x < 4
+x = 0
+else if x < 0
+x = 3
+add class active array[x]*/
+
+var arrow = document.getElementsByClassName("arrow");
+var presWrapper = document.getElementsByClassName("presWrapper");
+var n = 0;
+var right = true;
+
+arrow[0].addEventListener("click", rightFalse); //left arrow
+arrow[1].addEventListener("click", slide); //right arrow
+
+function rightFalse() {
+  right = false;
+  slide();
+};
+
+function slide() {
+  presWrapper[n].classList.remove("active");
+  if (right) {
+    n++
+  } else {
+    n--
+  }
+
+  if (n < 0) {
+    n = presWrapper.length - 1;
+  } else if (n >= presWrapper.length) {
+    n = 0;
+  }
+  
+  presWrapper[n].classList.add("active");
+};
