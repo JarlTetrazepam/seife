@@ -302,6 +302,7 @@ li:active {
       height: 0;
       border-top: 100px solid transparent;
       border-bottom: 100px solid transparent;
+      position: absolute;
     }
 
     .dropShadow {
@@ -313,7 +314,6 @@ li:active {
     }
 
     .slideDotsWrapper {
-      background-color: var(--greyWhite);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -339,4 +339,16 @@ li:active {
       background-color: var(--lightBlue);
       margin: 1vw;
     }
+}
+
+@media screen and (min-width: 1900px) {
+  .arrow {
+    transform: scale(1.5);
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  .arrow {
+    transform: scale(2.2);
+  }
 }

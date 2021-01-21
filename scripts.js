@@ -20,6 +20,7 @@ var x = bodyWidth;
 var perfectPresItemSize = 1.3116 * Math.pow(10, -4) * Math.pow(x, 2) + 1.50607148 * x + 10.3241424; //formula acquired through testing
 var perfectFontSize = 1.5007 * Math.pow(10, -12) * Math.pow(x, 4) - 9.651 * Math.pow(10, -9) * Math.pow(x, 3) + 1.948 * Math.pow(10, -5) * Math.pow(x, 2) - 0.0109467 * x + 17.9363218 //formula acquired through testing
 var perfectNavFontSize = 27.1920288 / (1 + 3.93781513 * Math.exp((-1.7729 * Math.pow(10, -3) * x))) // "
+
 window.onload = function() {dynamicScaling(bodyWidth, presItem)};
 
 function dynamicScaling(width, presItem) {
@@ -34,6 +35,9 @@ function dynamicScaling(width, presItem) {
   if(bodyWidth >= 1280) {
     navbar.style.fontSize = perfectNavFontSize + "px";
   }
+
+  arrow[0].style.top = 40 + "%";
+  arrow[1].style.top = 40 + "%";
 };
 
 
@@ -81,6 +85,6 @@ function slide() {
   } else if (n >= presWrapper.length) {
     n = 0;
   }
-  
+
   presWrapper[n].classList.add("active");
 };
