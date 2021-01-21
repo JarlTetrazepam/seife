@@ -86,7 +86,6 @@ ul {
   list-style-type: none;
   padding: 0px;
   width: 100%;
-  font-size: 15px;
 }
 
 .navButtons {
@@ -130,13 +129,14 @@ ul {
 }
 
 .footer {
-  height: 7.2vh;
+  padding: 0.75rem;
   max-height: var(--extrasMaxHeight);
   width: 100%;
   background-color: var(--lightBlue);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 0.75rem;
 }
 
 li {
@@ -187,10 +187,10 @@ li:active {
   display: none;
 }
 
-@media screen and (max-width: 387px)
-      ul {
-      font-size: 13px;
-    }
+@media screen and (max-width: 387px) {
+    ul {
+      font-size: 0.75rem;
+  }
 
 }
 
@@ -322,7 +322,7 @@ li:active {
       width: 100%;
       min-height: 10px;
       max-height: 5vh;
-      margin: 0.5%;
+      padding: 0.25%;
     }
 
     .right {
