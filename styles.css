@@ -278,6 +278,7 @@ li:active {
     .presWrapper > p {
       max-width: 70%;
       align-self: start;
+      text-align: left;
     }
 
     h3 {

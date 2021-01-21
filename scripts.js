@@ -71,6 +71,20 @@ arrow[0].addEventListener("click", rightFalse => { //left arrow
 });
 arrow[1].addEventListener("click", slide); //right arrow
 
+circle[0].addEventListener("click", function() {dotSlider(0)}); //tried to reduce this with for loop and indexOf but no luck. If someone can get it to work, msg me
+circle[1].addEventListener("click", function() {dotSlider(1)});
+circle[2].addEventListener("click", function() {dotSlider(2)});
+
+function dotSlider(pos) {
+  presWrapper[n].classList.remove("active");
+  circle[n].classList.remove("active");
+
+  n = pos;
+
+  presWrapper[n].classList.add("active");
+  circle[n].classList.add("active");
+};
+
 function slide() {
   presWrapper[n].classList.remove("active");
   circle[n].classList.remove("active");
