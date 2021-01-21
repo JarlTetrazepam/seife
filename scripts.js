@@ -22,6 +22,7 @@ var perfectFontSize = 1.5007 * Math.pow(10, -12) * Math.pow(x, 4) - 9.651 * Math
 var perfectNavFontSize = 27.1920288 / (1 + 3.93781513 * Math.exp((-1.7729 * Math.pow(10, -3) * x))) // "
 
 window.onload = function() {dynamicScaling(bodyWidth, presItem)};
+window.onresize = function() {dynamicScaling(bodyWidth, presItem)};
 
 function dynamicScaling(width, presItem) {
   document.body.style.fontSize = perfectFontSize + "px";
@@ -40,25 +41,7 @@ function dynamicScaling(width, presItem) {
   arrow[1].style.top = 40 + "%";
 };
 
-
-//pseudocode image slider
-/*x = 0
-event arrow triggers function
-
-function()
-
-array
-123
-active element = array[x]
-
-remove class active
-x++/x--
-if x < 4
-x = 0
-else if x < 0
-x = 3
-add class active array[x]*/
-
+//presItem slider
 var arrow = document.getElementsByClassName("arrow");
 var presWrapper = document.getElementsByClassName("presWrapper");
 var n = 0;
