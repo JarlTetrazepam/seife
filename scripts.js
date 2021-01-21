@@ -63,6 +63,7 @@ var arrow = document.getElementsByClassName("arrow");
 var presWrapper = document.getElementsByClassName("presWrapper");
 var n = 0;
 var right = true;
+var circle = document.getElementsByClassName("circle");
 
 arrow[0].addEventListener("click", rightFalse); //left arrow
 arrow[1].addEventListener("click", slide); //right arrow
@@ -74,6 +75,7 @@ function rightFalse() {
 
 function slide() {
   presWrapper[n].classList.remove("active");
+  circle[n].classList.remove("active");
   if (right) {
     n++
   } else {
@@ -87,4 +89,5 @@ function slide() {
   }
 
   presWrapper[n].classList.add("active");
+  circle[n].classList.add("active");
 };

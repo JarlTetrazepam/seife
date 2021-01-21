@@ -328,16 +328,32 @@ li:active {
       border-left: 50px solid var(--lightBlue);
     }
 
+    .right:active {
+      border-left: 50px solid var(--activeNavbar);
+    }
+
     .left {
+      transition: 0.08s ease-out;
       border-right: 50px solid var(--lightBlue);
+    }
+
+    .left:active {
+      transition: 0.08s ease-out;
+      border-right: 50px solid var(--activeNavbar);
     }
 
     .circle {
       border-radius: 50%;
       height: 20px;
       width: 20px;
-      background-color: var(--lightBlue);
+      border: solid 1px var(--lightBlue);
       margin: 1vw;
+    }
+
+    .circle.active {
+      background-color: var(--lightBlue);
+      transform: scale(1.1);
+      transition: 0.3s ease-out;
     }
 }
 
