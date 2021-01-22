@@ -329,6 +329,7 @@ li:active {
       min-height: 10px;
       max-height: 5vh;
       padding: 0.25%;
+      padding-bottom: 0.35%;
     }
 
     .right {
@@ -355,23 +356,63 @@ li:active {
       width: 20px;
       border: solid 1px var(--lightBlue);
       margin: 1vw;
+      transition: 0.3s ease-out;
+    }
+
+    .arrow:hover {
+      cursor: pointer;
+      transform: scale(0.9);
+      transition: 0.09s ease-out;
+    }
+
+    .circle:hover {
+      cursor: pointer;
+      transform: scale(1.1);
     }
 
     .circle.active {
       background-color: var(--lightBlue);
-      transform: scale(1.1);
-      transition: 0.3s ease-out;
+      transform: scale(1.2);
+      cursor: none;
     }
 }
 
 @media screen and (min-width: 1900px) {
-  .arrow {
+  .arrow, .circle {
+    transform: scale(1.3);
+  }
+
+  .circle.active {
+    transform: scale(1.5);
+  }
+
+  .arrow:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+
+  .circle:hover {
+    cursor: pointer;
     transform: scale(1.5);
   }
 }
 
 @media screen and (min-width: 3000px) {
-  .arrow {
+  .arrow, .circle {
     transform: scale(2.2);
+  }
+
+  .circle.active {
+    transform: scale(2.7);
+  }
+
+  .arrow:hover {
+    cursor: pointer;
+    transform: scale(2.1);
+  }
+
+  .circle:hover {
+    cursor: pointer;
+    transform: scale(3);
   }
 }
