@@ -187,7 +187,7 @@ li:hover {
   text-shadow: -0.2px -0.2px 0.2px rgba(0, 0, 0, 0.25);
   border-left: solid var(--lightBlue) var(--liBorderSize);
   border-right: solid var(--lightBlue) var(--liBorderSize);
-  background-color: var(--lightBlue); 
+  background-color: var(--lightBlue);
 
 }
 
@@ -219,10 +219,9 @@ li:active {
     ul {
       font-size: 0.75rem;
   }
-
 }
 
-@media screen and (min-width: 500px) { /* From this width on, presItem alignment is starting to look weird */
+@media screen and (min-width: 500px) {
   .footer {
     font-size: 0.75rem;
   }
@@ -396,7 +395,7 @@ li:active {
     .circle.active {
       background-color: var(--lightBlue);
       transform: scale(1.2);
-      cursor: none;
+      cursor: default;
     }
 }
 
