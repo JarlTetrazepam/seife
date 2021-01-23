@@ -142,6 +142,7 @@ h3 {
   justify-content: center;
   font-size: 0.7rem;
   text-align: center;
+  margin-top: 1rem;
 }
 
 li {
@@ -161,7 +162,7 @@ li {
   position: relative;
 }
 
-li span {
+li span, li img {
   position: relative;
   z-index: 1;
 }
@@ -213,6 +214,29 @@ li:active {
 
 .arrowWrapper, .slideDots {
   display: none;
+}
+
+.learnMore {
+  background-color: #046FBC;
+  display: flex;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  justify-content: space-around;
+  font-weight: bold;
+  align-items: center;
+  color: var(--greyWhite);
+  align-self: end;
+  text-align: left;
+  border-radius: 3px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+  text-shadow: 0.5px 2px 3px rgba(0, 0, 0, 0.25);
+  min-width: 170px;
+}
+
+.learnMore img {
+  max-height: 1.3em;
+  width: auto;
+  transform: scaleX(-1);
 }
 
 @media screen and (max-width: 387px) {

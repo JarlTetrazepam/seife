@@ -26,11 +26,15 @@ window.onload = function() {dynamicScaling(bodyWidth, presItem)};
 window.onresize = function() {dynamicScaling(bodyWidth, presItem)};
 
 function dynamicScaling(width, presItem) {
+  let learnMoreButtons = document.getElementsByClassName("learnMore");
   let presItemHeading = document.getElementsByClassName("presItemHeading")
+
   for (let i = 0; i < presItemHeading.length; i++) {
       presItemHeading[i].style.fontSize = perfectHeadingSize + "px";
   }
-
+  for (let i = 0; i < learnMoreButtons.length; i++) {
+    learnMoreButtons[i].style.fontSize = perfectFontSize + "px";
+  }
   document.body.style.fontSize = perfectFontSize + "px";
 
   if (bodyWidth < 1280) {
