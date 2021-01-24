@@ -3,6 +3,7 @@ html {
   --extrasMaxHeight: 64px; /* extras are the logo wrapper as well as the navbar */
   --extrasHeight: 7.2%;
   --extrasMinHeight: 50px;
+  --textColor: #2E2E2E;
   --lightBlue: #A3D0E4;
   --darkBlue: #046FBC;
   --greyWhite: #FBFBFB;
@@ -10,7 +11,7 @@ html {
   --activeNavbar: #9DC9DC; /* color for navbar items on :active */
   --liBorderSize: 2px; /* to make adjustment of nav > ul > li item borders easier */
   background-color: var(--greyWhite);
-  color: #2E2E2E; /* universal font color, not quite black to reduce eyestrain */
+  color: var(--textColor); /* universal font color, not quite black to reduce eyestrain */
   font-size: 16px;
 }
 
@@ -81,6 +82,7 @@ nav:hover {
 
 a {
   text-decoration: none;
+  color: var(--textColor);
 }
 
 ul {
@@ -159,6 +161,13 @@ h3 {
 }
 
 li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+a.navitem {
   width: 100%;
   height: 100%;
   padding: 5px;
@@ -175,12 +184,12 @@ li {
   position: relative;
 }
 
-li span, li img {
+a.navitem span, a.navitem img {
   position: relative;
   z-index: 1;
 }
 
-li::after {
+a.navitem::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -191,11 +200,11 @@ li::after {
   transition: all .35s;
 }
 
-li:hover::after {
+a.navitem:hover::after {
   height: 100%;
 }
 
-li:hover {
+a.navitem:hover {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0);
   cursor: pointer;
   text-shadow: -0.2px -0.2px 0.2px rgba(0, 0, 0, 0.25);
@@ -205,12 +214,12 @@ li:hover {
 
 }
 
-li:active::after {
+a.navitem:active::after {
   background-color: var(--activeNavbar);
   transition: background-color 0.08s ease-out;
 }
 
-.lightBlue {
+a.lightBlue {
   background-color: var(--lightBlue);
   border-left: solid var(--lightBlue) var(--liBorderSize);
   border-right: solid var(--lightBlue) var(--liBorderSize);
@@ -361,13 +370,14 @@ li:active::after {
     .footer {
       order: 4;
       font-size: 0.75rem;
+      max-height: 1.5em;
     }
 
     .navButtons {
       font-size: inherit;
     }
 
-    li {
+    a.navitem {
       padding: 0;
       min-height: calc(var(--extrasMinHeight) + 20px);
       height: var(--extrasHeight);
