@@ -4,12 +4,14 @@ html {
   --extrasHeight: 7.2%;
   --extrasMinHeight: 50px;
   --lightBlue: #A3D0E4;
+  --darkBlue: #046FBC;
   --greyWhite: #FBFBFB;
   --greyWhiteActive: #F8F8F8;
   --activeNavbar: #9DC9DC; /* color for navbar items on :active */
   --liBorderSize: 2px; /* to make adjustment of nav > ul > li item borders easier */
   background-color: var(--greyWhite);
   color: #2E2E2E; /* universal font color, not quite black to reduce eyestrain */
+  font-size: 16px;
 }
 
 html, body {
@@ -132,6 +134,15 @@ h3 {
   text-align: right;
 }
 
+.images > .pButtonWrapper {
+  justify-content: end;
+}
+
+.pButtonWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .footer {
   padding: 0.75rem;
   max-height: var(--extrasMaxHeight);
@@ -192,7 +203,7 @@ li:hover {
 
 }
 
-li:active {
+li:active::after {
   background-color: var(--activeNavbar);
   transition: background-color 0.08s ease-out;
 }
@@ -217,7 +228,7 @@ li:active {
 }
 
 .learnMore {
-  background-color: #046FBC;
+  background-color: var(--darkBlue);
   display: flex;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -227,16 +238,61 @@ li:active {
   color: var(--greyWhite);
   align-self: end;
   text-align: left;
-  border-radius: 3px;
+  border-radius: 6px;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
-  text-shadow: 0.5px 2px 3px rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.30);
   min-width: 170px;
+  border: none;
+  flex-wrap: nowrap;
+  position: relative;
 }
 
-.learnMore img {
+.learnMore svg {
   max-height: 1.3em;
   width: auto;
   transform: scaleX(-1);
+  margin-left: 0.2rem;
+  fill: var(--greyWhite);
+}
+
+.learnMore svg, .learnMore span {
+  z-index: 1;
+}
+
+.learnMore::before, .learnMore::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: var(--greyWhite);
+}
+
+.learnMore::before {
+  left: 0;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.learnMore::after {
+  right: 0;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.learnMore:hover::before, .learnMore:hover::after {
+  width: 50%;
+  transition: all 0.2s;
+}
+
+.learnMore:hover {
+  cursor: pointer;
+  border: solid 2px var(--darkBlue);
+  transition: all 0.2s;
+  color: var(--darkBlue);
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.learnMore:hover svg {
+  fill: var(--darkBlue);
 }
 
 @media screen and (max-width: 387px) {
@@ -327,7 +383,7 @@ li:active {
       border: solid 1px black;
     }
 
-    .presWrapper > p {
+    .presWrapper p {
       max-width: 70%;
       align-self: start;
       text-align: left;
@@ -382,6 +438,11 @@ li:active {
       border-left: 50px solid var(--lightBlue);
     }
 
+    .right:hover {
+      border-left: 50px solid var(--activeNavbar);
+      transition: all 0.2s ease-out;
+    }
+
     .right:active {
       border-left: 50px solid var(--activeNavbar);
     }
@@ -389,6 +450,11 @@ li:active {
     .left {
       transition: 0.08s ease-out;
       border-right: 50px solid var(--lightBlue);
+    }
+
+    .left:hover {
+      border-right: 50px solid var(--activeNavbar);
+      transition: all 0.2s ease-out;
     }
 
     .left:active {
@@ -407,8 +473,12 @@ li:active {
 
     .arrow:hover {
       cursor: pointer;
+    }
+
+    .arrow:active {
+      cursor: pointer;
       transform: scale(0.9);
-      transition: 0.09s ease-out;
+      transition: 0.01s ease-out;
     }
 
     .circle:hover {
@@ -420,6 +490,22 @@ li:active {
       background-color: var(--lightBlue);
       transform: scale(1.2);
       cursor: default;
+    }
+
+    .learnMore {
+      min-width: 215px;
+      align-self: center;
+      margin-left: 2rem;
+    }
+
+    .images > .pButtonWrapper { /*specificity issue with the images presItem, this fixes that */
+      justify-content: start;
+    }
+
+    .pButtonWrapper {
+      justify-content: start;
+      margin: 0.5rem;
+      flex-wrap: nowrap;
     }
 }
 
