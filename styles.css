@@ -127,6 +127,7 @@ h3 {
   min-width: 280px;
   height: auto;
   max-width: 75%;
+  border-radius: 2px;
 }
 
 .images {
@@ -266,6 +267,7 @@ li:active::after {
   position: absolute;
   top: 0;
   background-color: var(--greyWhite);
+  transition: all 0.2s;
 }
 
 .learnMore::before {
@@ -283,12 +285,17 @@ li:active::after {
   transition: all 0.2s;
 }
 
+.learnMore:active::before, .learnMore:active::after {
+  background-color: var(--greyWhiteActive);
+  transition: all 0.1s;
+}
+
 .learnMore:hover {
   cursor: pointer;
   border: solid 2px var(--darkBlue);
   transition: all 0.2s;
   color: var(--darkBlue);
-  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+  text-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.25);
 }
 
 .learnMore:hover svg {
@@ -380,7 +387,6 @@ li:active::after {
     .active .presItem {
       width: 100%;
       max-width: none;
-      border: solid 1px black;
     }
 
     .presWrapper p {
@@ -505,6 +511,7 @@ li:active::after {
     .pButtonWrapper {
       justify-content: start;
       margin: 0.5rem;
+      margin-left: 0;
       flex-wrap: nowrap;
     }
 }
@@ -554,5 +561,9 @@ li:active::after {
 
   .footer {
     font-size: 1.5rem;
+  }
+
+  .learnMore {
+    min-width: 450px;
   }
 }
