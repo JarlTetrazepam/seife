@@ -429,11 +429,24 @@ a.lightBlue {
 
     .arrow {
       margin: 4px;
-      width: 0;
-      height: 0;
-      border-top: 100px solid transparent;
-      border-bottom: 100px solid transparent;
+      height: 4.5em;
+      width: auto;
       position: absolute;
+      fill: var(--arrowColor);
+      position: relative;
+    }
+
+    .arrow:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+      transition: all 0.1s;
+      fill: var(--activeNavbar);
+    }
+
+    .arrow:active {
+      cursor: pointer;
+      transform: scale(0.9);
+      transition: 0.01s ease-out;
     }
 
     .dropShadow {
@@ -456,34 +469,6 @@ a.lightBlue {
       padding-bottom: 0.35%;
     }
 
-    .right {
-      border-left: 50px solid var(--arrowColor);
-    }
-
-    .right:hover {
-      border-left: 50px solid var(--activeNavbar);
-      transition: all 0.2s ease-out;
-    }
-
-    .right:active {
-      border-left: 50px solid var(--activeNavbar);
-    }
-
-    .left {
-      transition: 0.08s ease-out;
-      border-right: 50px solid var(--arrowColor);
-    }
-
-    .left:hover {
-      border-right: 50px solid var(--activeNavbar);
-      transition: all 0.2s ease-out;
-    }
-
-    .left:active {
-      transition: 0.08s ease-out;
-      border-right: 50px solid var(--activeNavbar);
-    }
-
     .circle {
       border-radius: 50%;
       height: 20px;
@@ -491,16 +476,6 @@ a.lightBlue {
       border: solid 1px var(--arrowColor);
       margin: 1vw;
       transition: 0.3s ease-out;
-    }
-
-    .arrow:hover {
-      cursor: pointer;
-    }
-
-    .arrow:active {
-      cursor: pointer;
-      transform: scale(0.9);
-      transition: 0.01s ease-out;
     }
 
     .circle:hover {
@@ -543,7 +518,7 @@ a.lightBlue {
 
   .arrow:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.5);
   }
 
   .circle:hover {
@@ -567,7 +542,7 @@ a.lightBlue {
 
   .arrow:hover {
     cursor: pointer;
-    transform: scale(2.1);
+    transform: scale(2.5);
   }
 
   .circle:hover {

@@ -22,8 +22,14 @@ var perfectFontSize = 1.5007 * Math.pow(10, -12) * Math.pow(x, 4) - 9.651 * Math
 var perfectNavFontSize = 27.1920288 / (1 + 3.93781513 * Math.exp((-1.7729 * Math.pow(10, -3) * x))) // "
 var perfectHeadingSize = 140.392202 / (1 + 5.72799519 * Math.exp(-3.726 * Math.pow(10, -4) * x))
 
-window.onload = function() {dynamicScaling(bodyWidth, presItem)};
-window.onresize = function() {dynamicScaling(bodyWidth, presItem)};
+window.onload = onload => {
+  arrow[0].style.bottom = -40 + "%";
+  arrow[1].style.bottom = -40 + "%";
+  dynamicScaling(bodyWidth, presItem)
+};
+window.onresize = function() {
+  dynamicScaling(bodyWidth, presItem)
+};
 
 function dynamicScaling(width, presItem) {
   let learnMoreButtons = document.getElementsByClassName("learnMore");
@@ -46,9 +52,6 @@ function dynamicScaling(width, presItem) {
   if(bodyWidth >= 1280) {
     navbar.style.fontSize = perfectNavFontSize + "px";
   }
-
-  arrow[0].style.top = 40 + "%";
-  arrow[1].style.top = 40 + "%";
 };
 
 //presItem slider
