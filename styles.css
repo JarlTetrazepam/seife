@@ -4,11 +4,12 @@ html {
   --extrasHeight: 7.2%;
   --extrasMinHeight: 50px;
   --textColor: #2E2E2E;
-  --lightBlue: #A3D0E4;
-  --darkBlue: #046FBC;
+  --lightBlue: #BFD3FA;
+  --arrowColor: #90B2F7;
+  --darkBlue: #1513E8;
   --greyWhite: #FBFBFB;
   --greyWhiteActive: #F8F8F8;
-  --activeNavbar: #9DC9DC; /* color for navbar items on :active */
+  --activeNavbar: #6091F3; /* color for navbar items on :active */
   --liBorderSize: 2px; /* to make adjustment of nav > ul > li item borders easier */
   background-color: var(--greyWhite);
   color: var(--textColor); /* universal font color, not quite black to reduce eyestrain */
@@ -456,7 +457,7 @@ a.lightBlue {
     }
 
     .right {
-      border-left: 50px solid var(--lightBlue);
+      border-left: 50px solid var(--arrowColor);
     }
 
     .right:hover {
@@ -470,7 +471,7 @@ a.lightBlue {
 
     .left {
       transition: 0.08s ease-out;
-      border-right: 50px solid var(--lightBlue);
+      border-right: 50px solid var(--arrowColor);
     }
 
     .left:hover {
@@ -487,7 +488,7 @@ a.lightBlue {
       border-radius: 50%;
       height: 20px;
       width: 20px;
-      border: solid 1px var(--lightBlue);
+      border: solid 1px var(--arrowColor);
       margin: 1vw;
       transition: 0.3s ease-out;
     }
@@ -508,7 +509,7 @@ a.lightBlue {
     }
 
     .circle.active {
-      background-color: var(--lightBlue);
+      background-color: var(--arrowColor);
       transform: scale(1.2);
       cursor: default;
     }

@@ -14,11 +14,10 @@ h4 {
 
 .aboutWrapper {
   hyphens: auto;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  word-break: break-word;
-  -ms-word-break: break-all;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
   word-break: break-all;
+    -ms-word-break: break-all;
 }
 
 .imgWrapper {
@@ -59,8 +58,18 @@ h4 {
 
 @media screen and (min-width: 1000px) {
   .bodyInnerWrapper {
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 22vw;
+    padding-right: 22vw;
     padding-top: 3em;
+  }
+
+  .imgWrapper {
+    height: 5em;
+    width: 5em;
+  }
+
+  h4 {
+    margin-bottom: 0.5em;
+    margin-top: 2em;
   }
 }
