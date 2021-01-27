@@ -40,3 +40,25 @@ html {
   font-size: 16px;
   transition: right 0.2s;
 }
+
+@media screen and (min-width: 500px) {
+ .bodyInnerWrapper {
+    padding-left: 5vw;
+    padding-right: 5vw;
+ }
+
+}
+
+@media screen and (min-width: 700px) {
+ .bodyInnerWrapper {
+    max-width: 60%;
+ }
+
+}
+
+@media screen and (min-width: 1280px) {
+ .bodyInnerWrapper {
+   max-width: none;
+ }
+
+}
