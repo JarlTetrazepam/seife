@@ -1,20 +1,27 @@
-//hides navbar when scrolling down, makes it reappear when scrolling up
+//hides navbar when scrolling down, makes it reappear when scrolling up, same for contact button on service.html
 var prevPos = window.pageYOffset;
 const navbar = document.getElementById("navigation");
+const contactButton = document.getElementsByClassName("contactButton");
 window.onscroll = function() {navHider()};
 
 function navHider() {
   let pos = window.pageYOffset;
   if (pos > prevPos) {
     navbar.style.bottom = "-" + navbar.getBoundingClientRect().height + "px"
+    if (contactButton.length != 0) {
+      contactButton[0].style.right = "-" + contactButton[0].getBoundingClientRect().width + "px"
+    }
   } else {
     navbar.style.bottom = "0px"
+    if (contactButton.length != 0) {
+      contactButton[0].style.right = 10 + "%"
+    }
   }
   prevPos = pos;
 };
 
 //responsiveness/screen size scaling
-const presItem = document.getElementsByClassName("presItem");
+var presItem = document.getElementsByClassName("presItem");
 var bodyWidth = document.body.getBoundingClientRect().width;
 var x = bodyWidth;
 var perfectPresItemSize = 1.3116 * Math.pow(10, -4) * Math.pow(x, 2) + 1.50607148 * x + 10.3241424; //formula acquired through testing
@@ -23,15 +30,19 @@ var perfectNavFontSize = 27.1920288 / (1 + 3.93781513 * Math.exp((-1.7729 * Math
 var perfectHeadingSize = 140.392202 / (1 + 5.72799519 * Math.exp(-3.726 * Math.pow(10, -4) * x))
 
 window.onload = onload => {
-  arrow[0].style.bottom = -40 + "%";
-  arrow[1].style.bottom = -40 + "%";
-  dynamicScaling(bodyWidth, presItem)
+  if (arrow.length != 0) {
+    arrow[0].style.bottom = -40 + "%";
+    arrow[1].style.bottom = -40 + "%";
+    dynamicScaling(bodyWidth)
+  } else {
+      dynamicScaling(bodyWidth)
+    }
 };
 window.onresize = function() {
-  dynamicScaling(bodyWidth, presItem)
+  dynamicScaling(bodyWidth)
 };
 
-function dynamicScaling(width, presItem) {
+function dynamicScaling(width) {
   let learnMoreButtons = document.getElementsByClassName("learnMore");
   let presItemHeading = document.getElementsByClassName("presItemHeading")
 
@@ -61,15 +72,19 @@ var n = 0;
 var right = true;
 var circle = document.getElementsByClassName("circle");
 
-arrow[0].addEventListener("click", rightFalse => { //left arrow
-  right = false;
-  slide();
-});
-arrow[1].addEventListener("click", slide); //right arrow
+if (arrow.length != 0) {
+  arrow[0].addEventListener("click", rightFalse => { //left arrow
+    right = false;
+    slide();
+  });
+  arrow[1].addEventListener("click", slide); //right arrow
+}
 
-circle[0].addEventListener("click", function() {dotSlider(0)}); //tried to reduce this with for loop and indexOf but no luck. If someone can get it to work, msg me
-circle[1].addEventListener("click", function() {dotSlider(1)});
-circle[2].addEventListener("click", function() {dotSlider(2)});
+if (circle.length != 0) {
+  circle[0].addEventListener("click", function() {dotSlider(0)});
+  circle[1].addEventListener("click", function() {dotSlider(1)});
+  circle[2].addEventListener("click", function() {dotSlider(2)});
+}
 
 function dotSlider(pos) {
   presWrapper[n].classList.remove("active");

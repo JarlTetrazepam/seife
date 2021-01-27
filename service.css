@@ -1,0 +1,42 @@
+html {
+  --priceColor: #818181;
+}
+
+.service {
+  margin-top: 2.5em;
+}
+
+.service li {
+  list-style-type: circle;
+}
+
+.service h4::after {
+  color: var(--priceColor);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.animation h4::after {
+  content: "ab 15€";
+}
+
+.photography h4::after {
+  content: "ab 30€";
+}
+
+.filming h4::after {
+  content: "ab 50€";
+}
+
+.editing h4::after {
+  content: "ab 20€";
+}
+
+.contactButton {
+  position: fixed;
+  position: -webkit-fixed;
+  bottom: 16%;
+  right: 5%;
+  font-size: 16px;
+  transition: right 0.2s;
+}
