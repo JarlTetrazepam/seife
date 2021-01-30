@@ -8,12 +8,12 @@ function navHider() {
   let pos = window.pageYOffset;
   if (pos > prevPos) {
     navbar.style.bottom = "-" + navbar.getBoundingClientRect().height + "px"
-    if (contactButton.length != 0) {
+    if (contactButton.length != 0 && bodyWidth < 1280) {
       contactButton[0].style.right = "-" + contactButton[0].getBoundingClientRect().width + "px"
     }
   } else {
     navbar.style.bottom = "0px"
-    if (contactButton.length != 0) {
+    if (contactButton.length != 0  && bodyWidth < 1280) {
       contactButton[0].style.right = 10 + "%"
     }
   }

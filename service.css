@@ -2,34 +2,61 @@ html {
   --priceColor: #818181;
 }
 
+h4 {
+  margin-top: 0;
+}
+
+.bodyInnerWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+  padding: 0;
+}
+
 .service {
-  margin-top: 2.5em;
+  padding: 2%;
+  margin-top: 1em;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  border-bottom: solid var(--lightBlue) 2px;
 }
 
 .service li {
   list-style-type: circle;
 }
 
+.service h4 {
+  text-decoration: underline;
+}
+
+.editing {
+  border-bottom: none
+}
+
 .service h4::after {
   color: var(--priceColor);
   font-size: 12px;
   font-weight: 600;
+  padding-left: 5px;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .animation h4::after {
-  content: "ab 15€";
+  content: " ab 15€";
 }
 
 .photography h4::after {
-  content: "ab 30€";
+  content: " ab 30€";
 }
 
 .filming h4::after {
-  content: "ab 50€";
+  content: " ab 50€";
 }
 
 .editing h4::after {
-  content: "ab 20€";
+  content: " ab 20€";
 }
 
 .contactButton {
@@ -47,6 +74,16 @@ html {
     padding-right: 5vw;
  }
 
+ .service {
+   border: solid var(--lightBlue) 1px;
+   border-radius: 5px;
+ }
+
+ .service:hover {
+   transform: scale(1.005);
+   transition: all 0.3s;
+ }
+
 }
 
 @media screen and (min-width: 700px) {
@@ -59,6 +96,44 @@ html {
 @media screen and (min-width: 1280px) {
  .bodyInnerWrapper {
    max-width: none;
+   flex-wrap: wrap;
+   grid-template-columns: repeat(2, minmax(300px, 1fr));
+   padding-left: 10%;
+   padding-right: 10%;
+   grid-gap: 1em;
+   justify-content: center;
  }
+
+ .service {
+   box-shadow: 0.5px 1px 3px rgba(0, 0, 0, 0.08);
+   padding-top: 1.5em;
+ }
+
+ .service h4::after {
+   font-size: 14px;
+ }
+
+}
+
+@media screen and (min-width: 1900px) {
+  .bodyInnerWrapper {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .contactButton {
+    right: auto;
+  }
+
+  .service h4::after {
+    font-size: 15px;
+  }
+
+}
+
+@media screen and (min-width: 3500px) {
+  .service h4::after {
+    font-size: 27px;
+  }
 
 }
