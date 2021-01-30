@@ -2,7 +2,9 @@
 var prevPos = window.pageYOffset;
 const navbar = document.getElementById("navigation");
 const contactButton = document.getElementsByClassName("contactButton");
-window.onscroll = function() {navHider()};
+window.onscroll = function() {
+  navHider()
+};
 
 function navHider() {
   let pos = window.pageYOffset;

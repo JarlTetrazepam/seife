@@ -78,7 +78,7 @@ nav:hover {
   height: var(--extrasHeight);
   max-height: calc(var(--extrasMaxHeight) + 20px);
   width: 100%;
-  background-color: var(--lightBlue);
+  box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.1);
 }
 
 a {
@@ -316,6 +316,12 @@ a.lightBlue {
 
 .learnMore:hover svg {
   fill: var(--darkBlue);
+}
+
+.stickyTop {
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 @media screen and (max-width: 387px) {

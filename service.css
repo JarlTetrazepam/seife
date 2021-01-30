@@ -31,7 +31,8 @@ h4 {
 }
 
 .editing {
-  border-bottom: none
+  border-bottom: none;
+  margin-bottom: 2em;
 }
 
 .service h4::after {
@@ -64,8 +65,16 @@ h4 {
   position: -webkit-fixed;
   bottom: 16%;
   right: 5%;
-  font-size: 16px;
+  font-size: 18px;
   transition: right 0.2s;
+}
+
+.contactButtonBanner {
+  visibility: none;
+}
+
+.contactButtonBanner > span {
+  display: none;
 }
 
 @media screen and (min-width: 500px) {
@@ -75,20 +84,53 @@ h4 {
  }
 
  .service {
+   box-shadow: 0.5px 1px 3px rgba(0, 0, 0, 0.08);
    border: solid var(--lightBlue) 1px;
    border-radius: 5px;
  }
 
  .service:hover {
+   box-shadow: 0.5px 1px 6px rgba(0, 0, 0, 0.1);
    transform: scale(1.005);
    transition: all 0.3s;
  }
+
+ .contactButtonBanner {
+   visibility: visible;
+   background-color: var(--greyWhite);
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 5px;
+   box-shadow: 0.5px 1px 3px rgba(0, 0, 0, 0.15);
+   border: solid var(--lightBlue) 1px;
+   margin-top: 3%;
+   padding: 0.5em;
+   font-weight: bold;
+   max-height: 3em;
+   grid-column: 1 / 3;
+ }
+
+ .contactButtonBanner > span {
+   display: inline;
+ }
+
+ .contactButton {
+   position: static;
+   margin-right: -30%;
+   margin-left: 10%;
+ }
+
+.contactButton button {
+  border: solid var(--darkBlue) 2.5px;
+}
 
 }
 
 @media screen and (min-width: 700px) {
  .bodyInnerWrapper {
-    max-width: 60%;
+    max-width: 80%;
  }
 
 }
@@ -105,13 +147,22 @@ h4 {
  }
 
  .service {
-   box-shadow: 0.5px 1px 3px rgba(0, 0, 0, 0.08);
-   padding-top: 1.5em;
+   padding-top: 1em;
  }
 
  .service h4::after {
    font-size: 14px;
  }
+
+}
+
+@media screen and (min-height: 930px) {
+  .bodyWrapper {
+    min-height: 100vh;
+  }
+  .bodyInnerWrapper {
+    min-height: 100%;
+  }
 
 }
 
