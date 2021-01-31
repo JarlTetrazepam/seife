@@ -498,7 +498,7 @@ a.lightBlue {
       cursor: default;
     }
 
-    .learnMore {
+    .learnMoreWrapper {
       min-width: 215px;
       align-self: center;
       margin-left: 2rem;
