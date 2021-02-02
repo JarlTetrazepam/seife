@@ -346,7 +346,7 @@ a.lightBlue {
     }
 }
 
-@media screen and (min-width: 1280px) { /* ~Desktop border https://gs.statcounter.com/screen-resolution-stats/desktop/worldwide */
+@media screen and (min-width: 1024px) { /* ~Desktop border https://gs.statcounter.com/screen-resolution-stats/desktop/worldwide */
     .bodyInnerWrapper {
       max-width: none;
       border-top: var(--lightBlue) solid 1.5px;

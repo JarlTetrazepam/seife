@@ -10,12 +10,12 @@ function navHider() {
   let pos = window.pageYOffset;
   if (pos > prevPos) {
     navbar.style.bottom = "-" + navbar.getBoundingClientRect().height + "px"
-    if (contactButton.length != 0 && bodyWidth < 1280) {
+    if (contactButton.length != 0 && bodyWidth < 1024) {
       contactButton[0].style.right = "-" + contactButton[0].getBoundingClientRect().width + "px"
     }
   } else {
     navbar.style.bottom = "0px"
-    if (contactButton.length != 0  && bodyWidth < 1280) {
+    if (contactButton.length != 0  && bodyWidth < 1024) {
       contactButton[0].style.right = 10 + "%"
     }
   }
@@ -56,13 +56,13 @@ function dynamicScaling(bodyWidth) {
   }
   document.body.style.fontSize = perfectFontSize + "px";
 
-  if (bodyWidth < 1280) {
+  if (bodyWidth < 1024) {
     for (let i = 0; i < presItem.length; i++) {
       presItem[i].style.width = perfectPresItemSize + "px";
     }
   }
 
-  if(bodyWidth >= 1280) {
+  if(bodyWidth >= 1024) {
     navbar.style.fontSize = perfectNavFontSize + "px";
   }
 };
