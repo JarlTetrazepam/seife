@@ -6,6 +6,7 @@ html {
   --textColor: #2E2E2E;
   --lightBlue: #BFD3FA;
   --arrowColor: #90B2F7;
+  --priceColor: #818181;
   --darkBlue: #1513E8;
   --greyWhite: #FBFBFB;
   --greyWhiteActive: #F8F8F8;
@@ -263,6 +264,7 @@ a.lightBlue {
   border: none;
   flex-wrap: nowrap;
   position: relative;
+  border: solid var(--darkBlue) 2.5px;
 }
 
 .learnMore svg {

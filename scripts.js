@@ -44,15 +44,15 @@ window.onresize = function() {
   dynamicScaling(bodyWidth)
 };
 
-function dynamicScaling(width) {
-  let learnMoreButtons = document.getElementsByClassName("learnMore");
+function dynamicScaling(bodyWidth) {
+  let buttonScaleButtons = document.getElementsByClassName("buttonScale");
   let presItemHeading = document.getElementsByClassName("presItemHeading")
 
   for (let i = 0; i < presItemHeading.length; i++) {
       presItemHeading[i].style.fontSize = perfectHeadingSize + "px";
   }
-  for (let i = 0; i < learnMoreButtons.length; i++) {
-    learnMoreButtons[i].style.fontSize = perfectFontSize + "px";
+  for (let i = 0; i < buttonScaleButtons.length; i++) {
+    buttonScaleButtons[i].style.fontSize = perfectFontSize + 1 + "px";
   }
   document.body.style.fontSize = perfectFontSize + "px";
 
