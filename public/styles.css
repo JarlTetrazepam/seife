@@ -346,14 +346,17 @@ a.lightBlue {
     }
 }
 
-@media screen and (min-width: 1024px) { /* ~Desktop border https://gs.statcounter.com/screen-resolution-stats/desktop/worldwide */
+@media screen and (min-width: 1024px) {
     .bodyInnerWrapper {
       max-width: none;
-      border-top: var(--lightBlue) solid 1.5px;
       box-shadow: -6px 0 transparent, -6px transparent, inset 0.5px 0.8px 3px -2px rgba(0, 0, 0, 0.25); /* bit of effort here to make the box shadow apply to the top part only */
       display: flex;
       flex-direction: row;
       justify-content: center;
+    }
+
+    .bodyWrapper {
+      border-top: var(--lightBlue) solid 1.5px;
     }
 
     .logoWrapper {

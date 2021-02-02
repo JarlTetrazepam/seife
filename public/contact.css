@@ -20,6 +20,7 @@
   box-shadow: inset 0.5px 0.5px 4px rgba(0, 0, 0, 0.15);
   max-width: 80%;
   border: solid var(--greyWhite) 1.5px;
+  font-family: "verdana";
 }
 
 .formItem::placeholder {
@@ -76,4 +77,38 @@ h1 {
   font-weight: 600;
   margin: 0;
   font-size: 1.13em;
+}
+
+@media screen and (min-height: 930px) {
+  .bodyWrapper {
+    min-height: 100vh;
+  }
+  .bodyInnerWrapper {
+    min-height: 100%;
+  }
+
+@media screen and (min-width: 1024px) {
+  .bodyInnerWrapper {
+    padding: 0 30vw;
+  }
+
+  .formItem:not(.submitButton) {
+    height: 2.25em;
+  }
+
+  .contentWrapper {
+    padding-right: 5vw;
+  }
+
+}
+
+@media screen and (min-width: 3000px) {
+  .formItem::placeholder {
+    font-size: 1em;
+  }
+
+  .formItem {
+    font-size: 2rem;
+  }
+
 }
