@@ -94,7 +94,7 @@ a {
   width: 100%;
 }
 
-h3 {
+h2 {
   margin: 0.4em;
   margin-top: 1.5rem;
 }
@@ -424,7 +424,7 @@ a.lightBlue {
       text-align: left;
     }
 
-    h3 {
+    h2 {
       margin-top: 1.2em;
       align-self: start;
     }

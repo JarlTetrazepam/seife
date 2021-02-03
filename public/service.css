@@ -1,7 +1,9 @@
 
 
-h4 {
+h2 {
   margin-top: 0;
+  font-size: 1em;
+  margin-left: 0;
 }
 
 .bodyInnerWrapper {
@@ -24,7 +26,7 @@ h4 {
   list-style-type: circle;
 }
 
-.service h4 {
+.service h2 {
   text-decoration: underline;
 }
 
@@ -33,7 +35,7 @@ h4 {
   margin-bottom: 2em;
 }
 
-.service h4::after {
+.service h2::after {
   color: var(--priceColor);
   font-size: 12px;
   font-weight: 600;
@@ -42,19 +44,19 @@ h4 {
   text-decoration: none;
 }
 
-.animation h4::after {
+.animation h2::after {
   content: " ab 15€";
 }
 
-.photography h4::after {
+.photography h2::after {
   content: " ab 30€";
 }
 
-.filming h4::after {
+.filming h2::after {
   content: " ab 50€";
 }
 
-.editing h4::after {
+.editing h2::after {
   content: " ab 20€";
 }
 
@@ -154,7 +156,7 @@ h4 {
    padding-top: 1em;
  }
 
- .service h4::after {
+ .service h2::after {
    font-size: 14px;
  }
 
@@ -184,14 +186,14 @@ h4 {
     right: auto;
   }
 
-  .service h4::after {
+  .service h2::after {
     font-size: 15px;
   }
 
 }
 
 @media screen and (min-width: 3500px) {
-  .service h4::after {
+  .service h2::after {
     font-size: 27px;
   }
 
