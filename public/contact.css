@@ -80,14 +80,17 @@ h1 {
 }
 
 @media screen and (min-height: 930px) {
+
   .bodyWrapper {
     min-height: 100vh;
   }
   .bodyInnerWrapper {
     min-height: 100%;
   }
+}
 
 @media screen and (min-width: 1024px) {
+
   .bodyInnerWrapper {
     padding: 0 30vw;
   }
