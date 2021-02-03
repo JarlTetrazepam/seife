@@ -56,7 +56,7 @@ h4 {
   float: left;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .bodyInnerWrapper {
     padding-left: 22vw;
     padding-right: 22vw;
