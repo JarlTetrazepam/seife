@@ -1,17 +1,15 @@
 {
   "hosting": {
     "public": "public",
-    "headers": [{
-      "source" : "**",
-      "headers" : [{
-        "key" : "Cache-Control",
-        "value" : "max-age=7890000"
-      }]
-    }]
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ]
+    "headers": [{
+      "source" : "**",
+      "key" : "Cache-Control",
+      "value" : "max-age=7890000"
+    }]
   }
 }
