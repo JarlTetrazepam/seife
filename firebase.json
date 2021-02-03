@@ -6,10 +6,5 @@
       "**/.*",
       "**/node_modules/**"
     ]
-    "headers": [{
-      "source" : "**",
-      "key" : "Cache-Control",
-      "value" : "max-age=7890000"
-    }]
   }
 }
