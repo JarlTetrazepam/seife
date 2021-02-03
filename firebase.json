@@ -1,11 +1,6 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
     "headers": [{
       "source" : "**",
       "headers" : [{
@@ -13,5 +8,10 @@
         "value" : "max-age=7890000"
       }]
     }]
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
   }
 }
