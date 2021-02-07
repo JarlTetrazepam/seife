@@ -404,13 +404,13 @@ a.lightBlue {
 
     .presWrapper {
       display: none;
-    }
-
-    .presWrapper.active {
-      display: flex;
       align-items: center;
       max-width: 80%;
       padding: 0px;
+    }
+
+    .active {
+      display: flex;
     }
 
     .active .presItem {

@@ -22,7 +22,10 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
             </p>
           </div>
-          <form class="formClass" action="https://formspree.io/f/maylkeva" method="post">
+          <section class="formAlertWrapper" id="formAlertWrapper">
+            <span class="formAlert">Ihre Nachricht wurde versendet. Vielen Dank!</span>
+          </section>
+          <form class="formClass" id="contactForm">
 
             <input class="formItem" type="text" id="fullName" name="name" placeholder="Name" required>
             <input class="formItem" type="email" id="email" name="mail" placeholder="E-Mail" required>
@@ -67,8 +70,30 @@
       </ul>
     </nav>
     <script src="scripts.js"></script>
-    <script src="/__/firebase/8.2.5/firebase-app.js"></script>
-    <script src="/__/firebase/8.2.5/firebase-analytics.js"></script>
-    <script src="/__/firebase/init.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDdSjNxvHF5plOk-lRCm07Y5DDo8VPTNiA",
+        authDomain: "seife-3082b.firebaseapp.com",
+        databaseURL: "https://seife-3082b-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "seife-3082b",
+        storageBucket: "seife-3082b.appspot.com",
+        messagingSenderId: "432701812499",
+        appId: "1:432701812499:web:68b28913a4ba6190b234e6",
+        measurementId: "G-THMDY03PCG"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      firebase.database();
+    </script>
+    <script src="sendMail.js"></script>
   </body>
 </html>

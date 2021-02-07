@@ -79,6 +79,38 @@ h1 {
   font-size: 1.13em;
 }
 
+.formAlertWrapper {
+  animation: expand 0.5 backwards ease;
+  display: none;
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.active.formAlertWrapper {
+  animation: expand 1s forwards ease;
+  display: flex;
+  padding: 5%;
+  border-radius: 5px;
+  border: solid #c3e6cb 1px;
+  margin: 1em;
+}
+
+@keyframes expand {
+  0% {
+    display: none;
+    opacity: 0
+  }
+  1% {
+    display: flex
+  }
+  50% {
+    opacity: 0.5
+  }
+  100% {
+    opacity: 1
+  }
+}
+
 @media screen and (min-height: 741px) {
 
   .bodyWrapper {
