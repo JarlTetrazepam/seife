@@ -80,8 +80,23 @@
       </ul>
     </nav>
   <script src="scripts.js"></script>
-  <script src="/__/firebase/8.2.5/firebase-app.js"></script>
-  <script src="/__/firebase/8.2.5/firebase-analytics.js"></script>
-  <script src="/__/firebase/init.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDdSjNxvHF5plOk-lRCm07Y5DDo8VPTNiA",
+      authDomain: "seife-3082b.firebaseapp.com",
+      databaseURL: "https://seife-3082b-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "seife-3082b",
+      storageBucket: "seife-3082b.appspot.com",
+      messagingSenderId: "432701812499",
+      appId: "1:432701812499:web:68b28913a4ba6190b234e6",
+      measurementId: "G-THMDY03PCG"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
   </body>
 </html>
