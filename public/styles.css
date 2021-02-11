@@ -411,6 +411,25 @@ a.lightBlue {
 
     .active {
       display: flex;
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+      30%{
+        opacity: 0;
+      }
+      50%{
+        opacity: 0.5;
+        transform: translateY(-50%);
+      }
+      100%{
+        opacity: 1;
+        transform: translateY(0%);
+      }
     }
 
     .active .presItem {
@@ -448,6 +467,7 @@ a.lightBlue {
       position: absolute;
       fill: var(--arrowColor);
       position: relative;
+      outline: none;
     }
 
     .arrow:hover {
