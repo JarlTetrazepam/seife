@@ -186,7 +186,7 @@ a.navitem {
   justify-content: center;
   text-shadow: 0.2px 0.2px 0.2px rgba(0, 0, 0, 0.25);
   border-left: solid var(--greyWhite) var(--liBorderSize);            /* invisible border because otherwise :hover moves the content of li*/
-  border-right:  solid var(--greyWhite) var(--liBorderSize);*/
+  border-right:  solid var(--greyWhite) var(--liBorderSize);
   background: transparent;
   transition: all .35s;
   position: relative;
