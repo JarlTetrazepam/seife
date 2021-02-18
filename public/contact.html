@@ -25,7 +25,7 @@
           <section class="formAlertWrapper" id="formAlertWrapper">
             <span class="formAlert">Ihre Nachricht wurde versendet. Vielen Dank!</span>
           </section>
-          <form class="formClass" id="contactForm">
+          <form class="formClass" id="contactForm" action="https://formspree.io/f/maylkeva" method="POST">
 
             <input class="formItem" type="text" id="fullName" name="name" placeholder="Name" required>
             <input class="formItem" type="email" id="email" name="mail" placeholder="E-Mail" required>
@@ -72,7 +72,6 @@
     <script src="scripts.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
     <script>
       const firebaseConfig = {
         apiKey: "AIzaSyDdSjNxvHF5plOk-lRCm07Y5DDo8VPTNiA",
@@ -87,8 +86,6 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
-      firebase.database();
     </script>
-    <script src="sendMail.js"></script>
   </body>
 </html>
