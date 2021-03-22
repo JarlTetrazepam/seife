@@ -1,0 +1,33 @@
+---
+  title: "contact"
+  layout: base.liquid
+---
+
+{% block content %}
+  <div class="bodyWrapper">
+    <div class="bodyInnerWrapper">
+      <section class="contentWrapper">
+        <div class="formDescription">
+          <h1>
+            Treten Sie in Kontakt
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          </p>
+        </div>
+        <section class="formAlertWrapper" id="formAlertWrapper">
+          <span class="formAlert">Ihre Nachricht wurde versendet. Vielen Dank!</span>
+        </section>
+        <form class="formClass" id="contactForm" action="https://formspree.io/f/maylkeva" method="POST">
+
+          <input class="formItem" type="text" id="fullName" name="name" placeholder="Name" required>
+          <input class="formItem" type="email" id="email" name="mail" placeholder="E-Mail" required>
+
+          <textarea class="formItem" name="subject" id="subject" placeholder="Ihr Anschreiben" required></textarea>
+          <input class="formItem buttonScale submitButton" type="submit" name="submit" value="Senden">
+
+        </form>
+      </section>
+    </div>
+  </div>
+{% endblock content%}
